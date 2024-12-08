@@ -1,12 +1,35 @@
 # React Router + Hono Monorepo Template
 
+A bleeding edge React Router v7 monorepo setup with the bells and whistles required to get a project underway with all the latest toys in late 2024.
+
 ### Setup
 
 ```shell
-git clone https://github.com/barclayd/<repo-name>
-cd repo-name
+git clone https://github.com/barclayd/react-router-trpc-hono-bun-template
+cd react-router-trpc-hono-bun-template
 bun install
 ```
+
+### Structure
+
+```
+.
+├── apps/
+│   ├── web/                 # React Router frontend
+│   │   ├── app/            # Routes and components
+│   │   └── package.json    # React 19, React Router, tRPC client
+│   │
+│   └── server/             # Hono backend
+│       ├── src/            # API routes and business logic
+│       └── package.json    # Hono, tRPC server
+│
+├── package.json            # Workspace dependencies
+└── turbo.json             # Turborepo config
+```
+
+The monorepo is powered by Turborepo and Bun workspaces, consisting of:
+- `apps/web`: React Router frontend application
+- `apps/server`: Hono backend server
 
 ### Technologies
 
