@@ -15,5 +15,5 @@ export async function loader() {
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  return <h1 className="font-sans text-2xl">{loaderData.data.id}</h1>;
+  return <h1 className="font-sans text-2xl">{loaderData?.data?.id ?? 4}</h1>;
 }

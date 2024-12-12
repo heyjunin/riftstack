@@ -9,8 +9,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     babel({
-      include: ['./app/**/*'],
-      filter: (name) => name.endsWith('tsx'),
+      filter: /\.tsx?$/,
       babelConfig: {
         presets: ['@babel/preset-typescript'],
         plugins: ['babel-plugin-react-compiler'],
