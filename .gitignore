@@ -11,6 +11,8 @@ node_modules
 
 # Testing
 coverage
+/test-results/
+/__screenshots__/
 
 # Turbo
 .turbo
@@ -23,6 +25,7 @@ coverage
 out/
 build
 dist
+
 
 
 # Debug
