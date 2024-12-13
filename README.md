@@ -53,6 +53,6 @@ The monorepo is powered by Turborepo and Bun workspaces, consisting of:
 ### Still to come
 
 * Database connectivity - SQL and NoSQL
-* Vitest + Vitest Browser Mode
-* Docker
+  * realtime subscriptions
+* Containerisation with Docker
 * Deployment via CD, powered by Github Actions
