@@ -1,4 +1,4 @@
-import { client } from 'index';
+import { client } from '../server';
 import type { Route } from './+types/_index';
 
 export function meta({}: Route.MetaArgs) {
