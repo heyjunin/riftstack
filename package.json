@@ -2,7 +2,7 @@
   "name": "swipe-move",
   "devDependencies": {
     "turbo": "^2.3.3",
-    "typescript": "5.5.4"
+    "typescript": "5.7.2"
   },
   "packageManager": "bun@1.1.38",
   "private": true,
