@@ -1,0 +1,45 @@
+# Fluxo de Desenvolvimento e Ferramentas
+
+## Gerenciamento de Dependências
+- **Package Manager**: Bun (versão 1.2.0)
+- **Monorepo**: Turbo para gerenciamento de workspaces
+- **Workspaces**: `apps/*` para aplicações
+
+## Scripts Disponíveis
+### Root (Monorepo)
+- `bun run dev` - Inicia todas as aplicações em desenvolvimento
+- `bun run build` - Build de todas as aplicações
+- `bun run test` - Executa testes em todas as aplicações
+- `bun run lint` - Linting em todas as aplicações
+
+### Frontend (apps/web/)
+- `bun run dev` - Inicia servidor de desenvolvimento React Router
+- `bun run build` - Build para produção
+- `bun run start` - Inicia servidor de produção
+- `bun run test` - Testes Playwright
+- `bun run test:browser` - Testes Vitest no browser
+- `bun run typecheck` - Verificação de tipos TypeScript
+
+### Backend (apps/server/)
+- `bun run dev` - Inicia servidor com hot reload
+- `bun run test` - Testes unitários
+- `bun run types` - Verificação de tipos TypeScript
+
+## Ferramentas de Qualidade
+- **Linting**: Biome em ambos os apps
+- **Type Checking**: TypeScript configurado
+- **Testing**: 
+  - Frontend: Vitest + Playwright
+  - Backend: Bun test runner
+- **Build**: Vite + React Router
+
+## Desenvolvimento
+- Usar `bun run dev` para desenvolvimento local
+- Hot reload ativo no backend
+- Fast refresh no frontend
+- Verificar tipos antes de commits
+- Executar linting antes de commits
+description:
+globs:
+alwaysApply: true
+---

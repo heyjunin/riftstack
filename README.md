@@ -1,58 +1,265 @@
-# React Router + Hono Monorepo Template
+# 🚀 RiftStack
 
-A bleeding edge React Router v7 monorepo setup with the bells and whistles required to get a project underway with all the latest toys in late 2024.
+> A "rift" in time - something fast and different. Modern sound and tech.
 
-### Setup
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Bun](https://img.shields.io/badge/Bun-1.2.0-000000?logo=bun&logoColor=white)](https://bun.sh/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![tRPC](https://img.shields.io/badge/tRPC-11.0.0-2596BE?logo=trpc&logoColor=white)](https://trpc.io/)
+[![Hono](https://img.shields.io/badge/Hono-4.7.4-000000?logo=hono&logoColor=white)](https://hono.dev/)
 
-```shell
-git clone https://github.com/barclayd/react-router-trpc-hono-bun-template
-cd react-router-trpc-hono-bun-template
-bun install
+A modern, full-stack web application template built with cutting-edge technologies. RiftStack combines the power of React Router, tRPC, and Hono to deliver a blazing-fast, type-safe development experience.
+
+## ✨ Features
+
+- **🚀 Ultra-Fast Development** - Built with Bun for lightning-fast package management and execution
+- **🔒 Type Safety** - End-to-end type safety with tRPC and TypeScript
+- **⚡ Modern React** - React 19 with the latest features and optimizations
+- **🎨 Beautiful UI** - Comprehensive component library with Radix UI and Tailwind CSS
+- **📱 Responsive Design** - Mobile-first approach with modern design patterns
+- **🧪 Testing Ready** - Vitest, Playwright, and React Testing Library included
+- **🔧 Developer Experience** - Hot reload, linting, and formatting with Biome
+- **📦 Monorepo Architecture** - Turbo-powered workspace management
+
+## 🏗️ Architecture
+
 ```
-
-### Structure
-
-```
-.
+RiftStack/
 ├── apps/
-│   ├── web/                 # React Router frontend
-│   │   ├── app/            # Routes and components
-│   │   └── package.json    # React 19, React Router, tRPC client
-│   │
-│   └── server/             # Hono backend
-│       ├── src/            # API routes and business logic
-│       └── package.json    # Hono, tRPC server
-│
-├── package.json            # Workspace dependencies
-└── turbo.json             # Turborepo config
+│   ├── server/          # Hono + tRPC backend
+│   └── web/            # React Router frontend
+├── packages/            # Shared packages (future)
+└── tools/              # Build and development tools
 ```
 
-The monorepo is powered by Turborepo and Bun workspaces, consisting of:
-- `apps/web`: React Router frontend application
-- `apps/server`: Hono backend server
+### Backend (Server)
 
-### Technologies
+- **Hono** - Ultra-fast web framework
+- **tRPC** - Type-safe API layer
+- **Zod** - Schema validation
+- **Bun** - JavaScript runtime
 
-| Category            | Technology                                                                                                                                                                                                                                                      | Version       |
-|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| Build system        | [<img src="https://user-images.githubusercontent.com/4060187/196936104-5797972c-ab10-4834-bd61-0d1e5f442c9c.png" width="40" alt="Turborepo">](https://turbo.build/repo) [Turborepo](https://turbo.build/repo)                                                   | 2.3.3         |
-| Workspace/runtime   | [<img src="https://bun.sh/logo.svg" width="40" alt="Bun">](https://bun.sh) [Bun](https://bun.sh)                                                                                                                                                                | 1.1.38        |
-| Linting             | [<img src="https://avatars.githubusercontent.com/u/140182603?s=200&v=4" width="40" alt="Biome">](https://biomejs.dev/) [Biome](https://biomejs.dev/)                                                                                                            | 1.9.4         |
-| Language            | [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" width="40" alt="TypeScript">](https://www.typescriptlang.org/) [TypeScript](https://www.typescriptlang.org/)             | 5.5.4         |
-| Server              | [<img src="https://raw.githubusercontent.com/honojs/hono/main/docs/images/hono-logo.png" width="40" alt="Hono">](https://hono.dev) [Hono](https://hono.dev)                                                                                                     | 4.6.13        |
-| API                 | [<img src="https://trpc.io/img/logo.svg" width="40" alt="tRPC">](https://trpc.io) [tRPC](https://trpc.io)                                                                                                                                                       | 11.0.0-rc.660 |
-| Schema validation   | [<img src="https://zod.dev/logo.svg" width="40" alt="Zod">](https://zod.dev) [Zod](https://zod.dev)                                                                                                                                                             | 3.23.8        |
-| UI framework        | [<img src="https://reactrouter.com/splash/hero-3d-logo.dark.webp" width="40" alt="React Router">](https://reactrouter.com) [React Router](https://reactrouter.com)                                                                                              | 7.0.2         |
-| UI library          | [<img src="https://reactjs.org/favicon.ico" width="40" alt="React">](https://react.dev) [React](https://react.dev)                                                                                                                                              | 19.0.0        |
-| Styling             | [<img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg" width="40" alt="Tailwind CSS">](https://tailwindcss.com) [Tailwind CSS](https://tailwindcss.com)                                           | 4.0.0-beta.6  |
-| E2E testing         | [<img src="https://playwright.dev/img/playwright-logo.svg" width="40" alt="Playwright">](https://playwright.dev) [Playwright](https://playwright.dev)                                                                                                           | 1.49.0        |
-| Integration testing | [<img src="https://raw.githubusercontent.com/vitest-dev/vitest/main/docs/public/logo.svg" width="40" alt="Vitest">](https://vitest.dev) [Vitest (Browser Mode)](https://vitest.dev)                                                                     | 2.1.8         |
-| Bundler             | [<img src="https://vitejs.dev/logo.svg" width="40" alt="Vite">](https://vitejs.dev) [Vite](https://vitejs.dev)                                                                                                                                                  | 6.0.3         |
-| CI                  | [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png" width="40" alt="GitHub Actions">](https://github.com/features/actions) [GitHub Actions](https://github.com/features/actions) | N/A           |
+### Frontend (Web)
 
-### Still to come
+- **React Router 7** - Modern routing with file-based routing
+- **React 19** - Latest React with compiler optimizations
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Radix UI** - Accessible component primitives
+- **Vite** - Lightning-fast build tool
 
-* Database connectivity - SQL and NoSQL
-  * realtime subscriptions
-* Containerisation with Docker
-* Deployment via CD, powered by Github Actions
+## 🚀 Quick Start
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) 1.2.0 or higher
+- Node.js 18+ (for some tooling)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd riftstack
+
+# Install dependencies
+bun install
+
+# Start development servers
+bun dev
+```
+
+### Development
+
+```bash
+# Start all services in development mode
+bun dev
+
+# Start only the backend
+cd apps/server && bun run dev
+
+# Start only the frontend
+cd apps/web && bun run dev
+
+# Run tests
+bun test
+
+# Lint code
+bun lint
+
+# Build for production
+bun build
+```
+
+## 📁 Project Structure
+
+```
+apps/
+├── server/
+│   ├── src/
+│   │   ├── context.ts      # tRPC context
+│   │   ├── index.ts        # Hono server entry
+│   │   ├── router.ts       # tRPC router
+│   │   ├── schemas.ts      # Zod schemas
+│   │   └── types.ts        # TypeScript types
+│   └── package.json
+└── web/
+    ├── app/
+    │   ├── components/     # UI components
+    │   ├── hooks/         # Custom React hooks
+    │   ├── lib/           # Utility functions
+    │   ├── routes/        # File-based routes
+    │   └── root.tsx       # Root layout
+    ├── public/            # Static assets
+    └── package.json
+```
+
+## 🛠️ Available Scripts
+
+### Root Level
+
+- `bun dev` - Start development servers
+- `bun build` - Build all applications
+- `bun test` - Run all tests
+- `bun lint` - Lint all code
+
+### Server App
+
+- `bun run dev` - Start server with hot reload
+- `bun test` - Run server tests
+- `bun run types` - Type check
+
+### Web App
+
+- `bun run dev` - Start development server
+- `bun run build` - Build for production
+- `bun run start` - Serve production build
+- `bun test` - Run Playwright tests
+- `bun run test:browser` - Run Vitest browser tests
+
+## 🎯 Key Technologies
+
+### Runtime & Package Manager
+
+- **[Bun](https://bun.sh/)** - All-in-one JavaScript runtime and package manager
+
+### Backend
+
+- **[Hono](https://hono.dev/)** - Fast, lightweight web framework
+- **[tRPC](https://trpc.io/)** - End-to-end typesafe APIs
+- **[Zod](https://zod.dev/)** - TypeScript-first schema validation
+
+### Frontend
+
+- **[React 19](https://react.dev/)** - Latest React with compiler
+- **[React Router 7](https://reactrouter.com/)** - Modern file-based routing
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS
+- **[Radix UI](https://www.radix-ui.com/)** - Accessible components
+
+### Build Tools
+
+- **[Vite](https://vitejs.dev/)** - Lightning-fast build tool
+- **[Turbo](https://turbo.build/)** - High-performance build system
+- **[Biome](https://biomejs.dev/)** - Fast formatter and linter
+
+### Testing
+
+- **[Vitest](https://vitest.dev/)** - Fast unit testing
+- **[Playwright](https://playwright.dev/)** - End-to-end testing
+- **[React Testing Library](https://testing-library.com/)** - Component testing
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create `.env` files in each app directory as needed:
+
+```bash
+# apps/server/.env
+DATABASE_URL="your-database-url"
+JWT_SECRET="your-jwt-secret"
+
+# apps/web/.env
+VITE_API_URL="http://localhost:3000"
+```
+
+### TypeScript
+
+The project uses strict TypeScript configuration with path mapping and modern features enabled.
+
+### Biome
+
+Code formatting and linting is handled by Biome with a configuration optimized for React and TypeScript projects.
+
+## 🧪 Testing
+
+### Unit Tests
+
+```bash
+# Run all unit tests
+bun test
+
+# Run tests in watch mode
+cd apps/web && bun run test:browser
+```
+
+### Integration Tests
+
+```bash
+# Run Playwright tests
+bun run test:integration
+```
+
+### Test Coverage
+
+The project is configured for comprehensive test coverage across both frontend and backend.
+
+## 🚀 Deployment
+
+### Production Build
+
+```bash
+# Build all applications
+bun build
+
+# The web app will be available in apps/web/build/
+# The server can be deployed directly from apps/server/
+```
+
+### Docker
+
+A Dockerfile is included for containerized deployment:
+
+```bash
+# Build the image
+docker build -t riftstack .
+
+# Run the container
+docker run -p 3000:3000 riftstack
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+**Maintainer:** [@heyjunin](https://github.com/heyjunin)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [React Router](https://reactrouter.com/) team for the amazing routing solution
+- [tRPC](https://trpc.io/) team for type-safe APIs
+- [Hono](https://hono.dev/) team for the fast web framework
+- [Bun](https://bun.sh/) team for the incredible runtime
+- [Vercel](https://vercel.com/) for Turbo and the monorepo tooling
+
+---
+
+**RiftStack** - Breaking through the boundaries of modern web development. ⚡

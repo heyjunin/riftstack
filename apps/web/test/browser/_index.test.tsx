@@ -10,9 +10,10 @@ test('generic browser mode test', async () => {
       Component: Home as ComponentType,
       loader: () =>
         Promise.resolve({
-          data: JSON.stringify({
+          data: {
             id: 4,
-          }),
+            status: 'active'
+          },
         }),
       action() {
         return {
@@ -27,7 +28,30 @@ test('generic browser mode test', async () => {
 
   render(<Stub initialEntries={['/']} />);
 
+  // Wait for the component to render and show the main heading
   await waitFor(() => {
-    expect(screen.getByRole('heading', { name: '4' })).toBeVisible();
+    expect(screen.getByRole('heading', { level: 1 })).toBeVisible();
   });
+
+  // Check if the main heading text is correct
+  expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Welcome to React Router + tRPC + Hono');
+
+  // Wait for the application status to be visible
+  await waitFor(() => {
+    expect(screen.getByText('Application Status')).toBeVisible();
+  });
+
+  // Check if the ID and status are displayed
+  await waitFor(() => {
+    expect(screen.getByText('4')).toBeVisible();
+  });
+
+  await waitFor(() => {
+    expect(screen.getByText('active')).toBeVisible();
+  });
+
+  // Check if navigation is present
+  expect(screen.getByText('Home')).toBeVisible();
+  expect(screen.getByText('About')).toBeVisible();
+  expect(screen.getByText('Settings')).toBeVisible();
 });

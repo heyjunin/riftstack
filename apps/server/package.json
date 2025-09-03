@@ -8,13 +8,17 @@
   },
   "dependencies": {
     "@trpc/server": "^11.0.0-rc.828",
+    "bcryptjs": "^3.0.2",
     "hono": "^4.7.4",
+    "jsonwebtoken": "^9.0.2",
     "uuid": "^11.1.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@hono/trpc-server": "0.3.4",
-    "@types/bun": "^1.2.5"
+    "@types/bcryptjs": "^3.0.0",
+    "@types/bun": "^1.2.5",
+    "@types/jsonwebtoken": "^9.0.10"
   }
 }

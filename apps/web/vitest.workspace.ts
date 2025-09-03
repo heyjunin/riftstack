@@ -1,13 +1,13 @@
-import { defineWorkspace } from 'vitest/config';
+import { defineWorkspace } from "vitest/config";
 
 const isHeadless =
-  process.argv.includes('--browser.headless') || !!process.env.CI;
+  process.argv.includes("--browser.headless") || !!process.env.CI;
 
 export default defineWorkspace([
   {
-    extends: './vitest.config.ts',
+    extends: "./vitest.config.ts",
     optimizeDeps: {
-      include: ['react/jsx-dev-runtime'],
+      include: ["react/jsx-dev-runtime"],
     },
     server: {
       fs: {
@@ -16,13 +16,14 @@ export default defineWorkspace([
     },
     test: {
       includeTaskLocation: true,
-      include: ['./test/browser/*.test.tsx'],
-      name: 'browser tests',
+      include: ["./test/browser/*.test.tsx"],
+      exclude: ["./test/e2e/**/*"],
+      name: "browser tests",
       browser: {
         enabled: true,
         headless: isHeadless,
-        name: 'chromium',
-        provider: 'playwright',
+        name: "chromium",
+        provider: "playwright",
         providerOptions: {},
       },
     },

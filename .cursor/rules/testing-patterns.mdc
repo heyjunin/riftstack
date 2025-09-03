@@ -1,0 +1,61 @@
+# Padrões de Teste
+
+## Estrutura de Testes
+
+### Frontend (apps/web/)
+- **Unit Tests**: Vitest + React Testing Library
+- **E2E Tests**: Playwright
+- **Browser Tests**: Vitest com browser headless
+- **Arquivos**: `test/` directory
+
+### Backend (apps/server/)
+- **Unit Tests**: Bun test runner nativo
+- **Arquivos**: `*.test.ts` junto com os arquivos fonte
+
+## Convenções de Nomenclatura
+- **Unit Tests**: `*.test.ts` ou `*.test.tsx`
+- **E2E Tests**: `*.spec.ts` ou `*.spec.tsx`
+- **Test Files**: Colocar em diretório `test/` ou junto aos arquivos fonte
+
+## Padrões de Teste Frontend
+```tsx
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import { MyComponent } from './MyComponent';
+
+describe('MyComponent', () => {
+  it('should render correctly', () => {
+    render(<MyComponent />);
+    expect(screen.getByText('Hello')).toBeInTheDocument();
+  });
+});
+```
+
+## Padrões de Teste Backend
+```typescript
+import { describe, it, expect } from 'bun:test';
+import { myFunction } from './myFunction';
+
+describe('myFunction', () => {
+  it('should return expected value', () => {
+    const result = myFunction('input');
+    expect(result).toBe('expected');
+  });
+});
+```
+
+## Comandos de Teste
+- `bun run test` - Executa todos os testes
+- `bun run test:integration` - Testes de integração
+- `bun run test:browser` - Testes no browser
+- `bun run test:browser:headless` - Testes headless
+
+## Cobertura
+- Manter alta cobertura de testes
+- Testar casos de erro e edge cases
+- Usar mocks quando apropriado
+- Testar componentes isoladamente
+description:
+globs:
+alwaysApply: true
+---

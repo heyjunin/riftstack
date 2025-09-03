@@ -1,0 +1,50 @@
+# Padrões Backend - Hono + tRPC
+
+## Arquitetura
+- **Hono**: Framework web minimalista e rápido
+- **tRPC**: RPC type-safe entre cliente e servidor
+- **Bun**: Runtime JavaScript/TypeScript
+
+## Estrutura de Arquivos
+- **Entry Point**: [apps/server/src/index.ts](mdc:apps/server/src/index.ts)
+- **Router**: [apps/server/src/router.ts](mdc:apps/server/src/router.ts)
+- **Context**: [apps/server/src/context.ts](mdc:apps/server/src/context.ts)
+- **Schemas**: [apps/server/src/schemas.ts](mdc:apps/server/src/schemas.ts)
+- **Types**: [apps/server/src/types.ts](mdc:apps/server/src/types.ts)
+
+## Padrões tRPC
+- Usar `initTRPC.context<Context>().create()`
+- Definir procedures públicas com `publicProcedure`
+- Usar `input()` para validação de entrada com Zod
+- Implementar `mutation()` para operações de escrita
+- Implementar `query()` para operações de leitura
+
+## Validação
+- Usar Zod para schemas de validação
+- Definir schemas em [apps/server/src/schemas.ts](mdc:apps/server/src/schemas.ts)
+- Validar entrada de todas as procedures
+
+## Exemplo de Procedure
+```typescript
+export const appRouter = router({
+  update: publicProcedure
+    .input(updateSchema)
+    .mutation(({ input }) => {
+      // Lógica da mutation
+    }),
+  
+  get: publicProcedure
+    .query(() => {
+      return { id: 4, status: 'active' };
+    }),
+});
+```
+
+## Context
+- Definir contexto em [apps/server/src/context.ts](mdc:apps/server/src/context.ts)
+- Incluir autenticação, banco de dados, etc.
+- Usar `createCallerFactory` para criar caller type-safe
+description:
+globs:
+alwaysApply: true
+---

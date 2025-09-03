@@ -1,0 +1,43 @@
+# Componentes UI e shadcn/ui
+
+## Biblioteca de Componentes
+- **shadcn/ui**: Componentes baseados em Radix UI disponíveis em [apps/web/app/components/ui/](mdc:apps/web/app/components/ui/)
+- **Tailwind CSS v4**: Sistema de estilização principal
+- **Lucide React**: Ícones consistentes em toda a aplicação
+
+## Componentes Disponíveis
+- **Layout**: Card, Accordion, Collapsible, Separator
+- **Navigation**: Button, Link, Navigation Menu, Breadcrumb
+- **Forms**: Input, Select, Checkbox, Radio Group, Form
+- **Feedback**: Alert, Dialog, Toast (Sonner), Progress
+- **Data Display**: Table, Badge, Avatar, Calendar
+
+## Padrões de Uso
+- Sempre importar componentes de `./components/ui/`
+- Usar `cn()` utility para combinar classes Tailwind
+- Implementar variantes usando `class-variance-authority`
+- Seguir padrões de acessibilidade do Radix UI
+
+## Exemplo de Componente
+```tsx
+import { Button } from './components/ui/button';
+import { cn } from './lib/utils';
+
+export function MyButton({ className, ...props }) {
+  return (
+    <Button 
+      className={cn("custom-classes", className)} 
+      {...props} 
+    />
+  );
+}
+```
+
+## Tema
+- Usar `next-themes` para suporte a tema claro/escuro
+- Implementar variáveis CSS para cores consistentes
+- Seguir design system estabelecido
+description:
+globs:
+alwaysApply: true
+---

@@ -1,0 +1,41 @@
+# Estrutura do Projeto Monorepo
+
+Este é um projeto monorepo usando **Turbo** com as seguintes aplicações:
+
+## Apps Principais
+
+### Frontend (apps/web/)
+
+- **Framework**: React Router v7 com React 19
+- **Build Tool**: Vite + React Router
+- **Styling**: Tailwind CSS v4 + shadcn/ui components
+- **Testing**: Vitest + Playwright
+- **Linting**: Biome
+- **Entry Point**: [apps/web/app/root.tsx](mdc:apps/web/app/root.tsx)
+- **Routes**: Sistema de rotas baseado em arquivos em [apps/web/app/routes/](mdc:apps/web/app/routes/)
+
+### Backend (apps/server/)
+
+- **Framework**: Hono + tRPC
+- **Runtime**: Bun
+- **Entry Point**: [apps/server/src/index.ts](mdc:apps/server/src/index.ts)
+- **Router**: [apps/server/src/router.ts](mdc:apps/server/src/router.ts)
+
+## Configurações
+
+- **Package Manager**: Bun
+- **Monorepo**: Turbo
+- **TypeScript**: Configurado em ambos os apps
+- **Linting**: Biome em ambos os apps
+
+## Comandos Principais
+
+- `bun run dev` - Inicia todas as aplicações em modo desenvolvimento
+- `bun run build` - Build de todas as aplicações
+- `bun run test` - Executa testes em todas as aplicações
+- `bun run lint` - Linting em todas as aplicações
+  description:
+  globs:
+  alwaysApply: true
+
+---
