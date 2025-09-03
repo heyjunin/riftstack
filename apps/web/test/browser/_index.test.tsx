@@ -1,4 +1,5 @@
 import { render, screen, waitFor } from '@testing-library/react';
+import type { ComponentType } from 'react';
 import { createRoutesStub } from 'react-router';
 import Home from '../../app/routes/_index';
 
@@ -6,7 +7,7 @@ test('generic browser mode test', async () => {
   const Stub = createRoutesStub([
     {
       path: '/',
-      Component: Home,
+      Component: Home as ComponentType,
       loader: () =>
         Promise.resolve({
           data: JSON.stringify({
