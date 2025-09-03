@@ -59,7 +59,7 @@ RiftStack/
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/heyjunin/riftstack.git
 cd riftstack
 
 # Install dependencies
