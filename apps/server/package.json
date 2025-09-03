@@ -4,14 +4,23 @@
     "dev": "bun run --hot src/index.ts",
     "lint": "bunx biome check --write .",
     "test": "bun test",
-    "types": "tsc --noEmit"
+    "types": "tsc --noEmit",
+    "logs:status": "./scripts/manage-logs.sh status",
+    "logs:tail": "./scripts/manage-logs.sh tail",
+    "logs:errors": "./scripts/manage-logs.sh errors",
+    "logs:http": "./scripts/manage-logs.sh http",
+    "logs:clean": "./scripts/manage-logs.sh clean",
+    "logs:archive": "./scripts/manage-logs.sh archive"
   },
   "dependencies": {
     "@trpc/server": "^11.0.0-rc.828",
     "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
     "hono": "^4.7.4",
     "jsonwebtoken": "^9.0.2",
     "uuid": "^11.1.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
@@ -19,6 +28,7 @@
     "@hono/trpc-server": "0.3.4",
     "@types/bcryptjs": "^3.0.0",
     "@types/bun": "^1.2.5",
+    "@types/cors": "^2.8.19",
     "@types/jsonwebtoken": "^9.0.10"
   }
 }

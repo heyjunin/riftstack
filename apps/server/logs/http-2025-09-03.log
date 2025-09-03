@@ -1,0 +1,359 @@
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:35:12:3512"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:35:14:3514"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:35:20:3520"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:35:21:3521"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:35:29:3529"}
+{"ip":"unknown","level":"http","message":"Incoming GET request","method":"GET","timestamp":"2025-09-03 12:35:32:3532","url":"http://localhost:3000/","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"ip":"unknown","level":"warn","message":"Route not found","method":"GET","path":"/","timestamp":"2025-09-03 12:35:32:3532","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"4ms","level":"http","message":"Completed GET http://localhost:3000/","method":"GET","status":404,"timestamp":"2025-09-03 12:35:32:3532","url":"http://localhost:3000/"}
+{"ip":"unknown","level":"http","message":"Incoming GET request","method":"GET","timestamp":"2025-09-03 12:35:32:3532","url":"http://localhost:3000/favicon.ico","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"ip":"unknown","level":"warn","message":"Route not found","method":"GET","path":"/favicon.ico","timestamp":"2025-09-03 12:35:32:3532","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"1ms","level":"http","message":"Completed GET http://localhost:3000/favicon.ico","method":"GET","status":404,"timestamp":"2025-09-03 12:35:32:3532","url":"http://localhost:3000/favicon.ico"}
+{"ip":"unknown","level":"http","message":"Incoming GET request","method":"GET","timestamp":"2025-09-03 12:35:40:3540","url":"http://localhost:3000/health","userAgent":"curl/7.86.0"}
+{"ip":"unknown","level":"warn","message":"Route not found","method":"GET","path":"/health","timestamp":"2025-09-03 12:35:40:3540","userAgent":"curl/7.86.0"}
+{"duration":"1ms","level":"http","message":"Completed GET http://localhost:3000/health","method":"GET","status":404,"timestamp":"2025-09-03 12:35:40:3540","url":"http://localhost:3000/health"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:35:48:3548","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"3ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:35:48:3548","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:35:49:3549","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"0ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:35:49:3549","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:35:51:3551","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"1ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:35:51:3551","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:35:51:3551","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"1ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:35:51:3551","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D"}
+{"ip":"unknown","level":"http","message":"Incoming GET request","method":"GET","timestamp":"2025-09-03 12:35:52:3552","url":"http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json","userAgent":"curl/7.86.0"}
+{"duration":"0ms","level":"http","message":"Completed GET http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json","method":"GET","status":200,"timestamp":"2025-09-03 12:35:52:3552","url":"http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:35:53:3553","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"1ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:35:53:3553","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:35:54:3554","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"1ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:35:54:3554","url":"http://localhost:3001/trpc/auth.me?batch=1&input=%7B%7D"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:35:57:3557","url":"http://localhost:3001/trpc/auth.login?batch=1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"1ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.login?batch=1","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:35:57:3557","url":"http://localhost:3001/trpc/auth.login?batch=1"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:35:59:3559","url":"http://localhost:3001/trpc/auth.login?batch=1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"0ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.login?batch=1","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:35:59:3559","url":"http://localhost:3001/trpc/auth.login?batch=1"}
+{"ip":"unknown","level":"http","message":"Incoming GET request","method":"GET","timestamp":"2025-09-03 12:36:00:360","url":"http://localhost:3000/","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"ip":"unknown","level":"warn","message":"Route not found","method":"GET","path":"/","timestamp":"2025-09-03 12:36:00:360","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"1ms","level":"http","message":"Completed GET http://localhost:3000/","method":"GET","status":404,"timestamp":"2025-09-03 12:36:00:360","url":"http://localhost:3000/"}
+{"ip":"unknown","level":"http","message":"Incoming GET request","method":"GET","timestamp":"2025-09-03 12:36:02:362","url":"http://localhost:3000/.well-known/appspecific/com.chrome.devtools.json","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"0ms","level":"http","message":"Completed GET http://localhost:3000/.well-known/appspecific/com.chrome.devtools.json","method":"GET","status":200,"timestamp":"2025-09-03 12:36:02:362","url":"http://localhost:3000/.well-known/appspecific/com.chrome.devtools.json"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:36:03:363","url":"http://localhost:3001/trpc/auth.login?batch=1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"1ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.login?batch=1","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:36:03:363","url":"http://localhost:3001/trpc/auth.login?batch=1"}
+{"ip":"unknown","level":"http","message":"Incoming POST request","method":"POST","timestamp":"2025-09-03 12:36:03:363","url":"http://localhost:3001/trpc/test","userAgent":"curl/7.86.0"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 12:36:03:363"}
+{"duration":"3ms","level":"http","message":"Completed POST http://localhost:3001/trpc/test","method":"POST","status":404,"timestamp":"2025-09-03 12:36:03:363","url":"http://localhost:3001/trpc/test"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:36:17:3617","url":"http://localhost:3001/trpc/auth.login?batch=1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"0ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.login?batch=1","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:36:17:3617","url":"http://localhost:3001/trpc/auth.login?batch=1"}
+{"ip":"unknown","level":"http","message":"Incoming HEAD request","method":"HEAD","timestamp":"2025-09-03 12:36:54:3654","url":"http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json","userAgent":"curl/7.86.0"}
+{"duration":"0ms","level":"http","message":"Completed HEAD http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json","method":"HEAD","status":200,"timestamp":"2025-09-03 12:36:54:3654","url":"http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:37:00:370"}
+{"ip":"unknown","level":"http","message":"Incoming OPTIONS request","method":"OPTIONS","timestamp":"2025-09-03 12:37:22:3722","url":"http://localhost:3001/trpc/auth.login?batch=1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"1ms","level":"http","message":"Completed OPTIONS http://localhost:3001/trpc/auth.login?batch=1","method":"OPTIONS","status":415,"timestamp":"2025-09-03 12:37:22:3722","url":"http://localhost:3001/trpc/auth.login?batch=1"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:38:29:3829"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:38:29:3829"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:38:31:3831"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:38:31:3831"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:39:03:393","username":"testuser"}
+{"email":"test@example.com","ip":"unknown","level":"error","message":"User registration failed: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.","stack":"Error: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.\n    at <anonymous> (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/node_modules/jsonwebtoken/sign.js:163:24)\n    at generateToken (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:192:23)\n    at register (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:42:24)\n    at processTicksAndRejections (native:7:39)","timestamp":"2025-09-03 15:39:03:393","username":"testuser"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:39:03:393","username":"user1"}
+{"email":"duplicate@example.com","ip":"unknown","level":"error","message":"User registration failed: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.","stack":"Error: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.\n    at <anonymous> (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/node_modules/jsonwebtoken/sign.js:163:24)\n    at generateToken (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:192:23)\n    at register (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:42:24)\n    at processTicksAndRejections (native:7:39)","timestamp":"2025-09-03 15:39:03:393","username":"user1"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:39:03:393","username":""}
+{"email":"invalid-email","ip":"unknown","level":"error","message":"User registration failed: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.","stack":"Error: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.\n    at <anonymous> (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/node_modules/jsonwebtoken/sign.js:163:24)\n    at generateToken (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:192:23)\n    at register (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:42:24)\n    at processTicksAndRejections (native:7:39)","timestamp":"2025-09-03 15:39:03:393","username":""}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"admin@example.com","error":"Bad \"options.expiresIn\" option the payload already has an \"exp\" property.","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"admin@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"admin@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"nonexistent@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"nonexistent@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"nonexistent@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"invalid-email","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:39:03:393"}
+{"email":"invalid-email","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"error":"invalid token","level":"warn","message":"Token validation failed - invalid token","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"error":"jwt expired","level":"warn","message":"Token validation failed - invalid token","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"warn","message":"Token validation failed - user not found","timestamp":"2025-09-03 15:39:03:393","userId":"non-existent-id"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:39:03:393"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:39:04:394"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:39:04:394"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:39:16:3916"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:39:20:3920"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:39:20:3920"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:39:20:3920"}
+{"ip":"unknown","level":"http","message":"Incoming POST request","method":"POST","timestamp":"2025-09-03 12:39:24:3924","url":"http://localhost:3001/trpc/auth.login","userAgent":"curl/7.86.0"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 12:39:24:3924"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 12:39:24:3924"}
+{"email":"test@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 12:39:24:3924"}
+{"email":"test@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 12:39:24:3924"}
+{"duration":"6ms","level":"http","message":"Completed POST http://localhost:3001/trpc/auth.login","method":"POST","status":401,"timestamp":"2025-09-03 12:39:24:3924","url":"http://localhost:3001/trpc/auth.login"}
+{"ip":"unknown","level":"http","message":"Incoming POST request","method":"POST","timestamp":"2025-09-03 12:39:29:3929","url":"http://localhost:3001/trpc/auth.login","userAgent":"curl/7.86.0"}
+{"duration":"1ms","level":"http","message":"Completed POST http://localhost:3001/trpc/auth.login","method":"POST","status":415,"timestamp":"2025-09-03 12:39:29:3929","url":"http://localhost:3001/trpc/auth.login"}
+{"ip":"unknown","level":"http","message":"Incoming POST request","method":"POST","timestamp":"2025-09-03 12:39:33:3933","url":"http://localhost:3001/trpc/auth.login","userAgent":"curl/7.86.0"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 12:39:33:3933"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 12:39:33:3933"}
+{"email":"admin@example.com","error":"Bad \"options.expiresIn\" option the payload already has an \"exp\" property.","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 12:39:33:3933"}
+{"duration":"2ms","level":"http","message":"Completed POST http://localhost:3001/trpc/auth.login","method":"POST","status":401,"timestamp":"2025-09-03 12:39:33:3933","url":"http://localhost:3001/trpc/auth.login"}
+{"ip":"unknown","level":"http","message":"Incoming GET request","method":"GET","timestamp":"2025-09-03 12:39:37:3937","url":"http://localhost:3000/.well-known/appspecific/com.chrome.devtools.json","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"0ms","level":"http","message":"Completed GET http://localhost:3000/.well-known/appspecific/com.chrome.devtools.json","method":"GET","status":200,"timestamp":"2025-09-03 12:39:37:3937","url":"http://localhost:3000/.well-known/appspecific/com.chrome.devtools.json"}
+{"level":"info","message":"🛑 Server shutting down","signal":"SIGINT","timestamp":"2025-09-03 12:39:59:3959"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:01:401"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:40:29:4029","username":"testuser"}
+{"email":"test@example.com","ip":"unknown","level":"error","message":"User registration failed: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.","stack":"Error: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.\n    at <anonymous> (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/node_modules/jsonwebtoken/sign.js:163:24)\n    at generateToken (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:192:23)\n    at register (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:42:24)\n    at processTicksAndRejections (native:7:39)","timestamp":"2025-09-03 15:40:29:4029","username":"testuser"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:40:29:4029","username":"user1"}
+{"email":"duplicate@example.com","ip":"unknown","level":"error","message":"User registration failed: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.","stack":"Error: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.\n    at <anonymous> (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/node_modules/jsonwebtoken/sign.js:163:24)\n    at generateToken (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:192:23)\n    at register (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:42:24)\n    at processTicksAndRejections (native:7:39)","timestamp":"2025-09-03 15:40:29:4029","username":"user1"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:40:29:4029","username":""}
+{"email":"invalid-email","ip":"unknown","level":"error","message":"User registration failed: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.","stack":"Error: Bad \"options.expiresIn\" option the payload already has an \"exp\" property.\n    at <anonymous> (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/node_modules/jsonwebtoken/sign.js:163:24)\n    at generateToken (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:192:23)\n    at register (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:42:24)\n    at processTicksAndRejections (native:7:39)","timestamp":"2025-09-03 15:40:29:4029","username":""}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"admin@example.com","error":"Bad \"options.expiresIn\" option the payload already has an \"exp\" property.","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"admin@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"admin@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"nonexistent@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"nonexistent@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"nonexistent@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"invalid-email","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:40:29:4029"}
+{"email":"invalid-email","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"error":"invalid token","level":"warn","message":"Token validation failed - invalid token","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"error":"jwt expired","level":"warn","message":"Token validation failed - invalid token","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"level":"warn","message":"Token validation failed - user not found","timestamp":"2025-09-03 15:40:29:4029","userId":"non-existent-id"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:29:4029"}
+{"ip":"unknown","level":"http","message":"Incoming GET request","method":"GET","timestamp":"2025-09-03 12:40:29:4029","url":"http://localhost:3000/.well-known/appspecific/com.chrome.devtools.json","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+{"duration":"2ms","level":"http","message":"Completed GET http://localhost:3000/.well-known/appspecific/com.chrome.devtools.json","method":"GET","status":200,"timestamp":"2025-09-03 12:40:29:4029","url":"http://localhost:3000/.well-known/appspecific/com.chrome.devtools.json"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:39:4039"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:39:4039"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:39:4039"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:41:4041"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:41:4041"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:41:4041"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:42:4042"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:42:4042"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:42:4042"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:43:4043"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:43:4043"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:43:4043"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:40:45:4045","username":"testuser"}
+{"email":"test@example.com","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:40:45:4045","userId":"20da9ce9-60a9-424b-9dc8-fce4cfbc2fbe","username":"testuser"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:40:45:4045","userId":"20da9ce9-60a9-424b-9dc8-fce4cfbc2fbe","username":"testuser"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:40:45:4045","username":"user1"}
+{"email":"duplicate@example.com","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:40:45:4045","userId":"d091de9b-ac77-4a88-862e-e6915dd9d1cc","username":"user1"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:40:45:4045","userId":"d091de9b-ac77-4a88-862e-e6915dd9d1cc","username":"user1"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:40:45:4045","username":"user2"}
+{"email":"duplicate@example.com","level":"warn","message":"Registration failed - user already exists","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"duplicate@example.com","ip":"unknown","level":"error","message":"User registration failed: User with this email already exists","stack":"Error: User with this email already exists\n    at register (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:29:17)\n    at processTicksAndRejections (native:7:39)","timestamp":"2025-09-03 15:40:45:4045","username":"user2"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:40:45:4045","username":""}
+{"email":"invalid-email","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:40:45:4045","userId":"7382f563-1fae-4d17-9e0d-1780a8f35139","username":""}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:40:45:4045","userId":"7382f563-1fae-4d17-9e0d-1780a8f35139","username":""}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"admin@example.com","level":"info","message":"User login completed successfully","role":"admin","timestamp":"2025-09-03 15:40:45:4045","userId":"1","username":"admin"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User logged in successfully","role":"admin","timestamp":"2025-09-03 15:40:45:4045","userId":"1","username":"admin"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"admin@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"admin@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:40:45:4045"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"nonexistent@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"nonexistent@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"nonexistent@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:40:45:4045"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:40:45:4045"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:40:45:4045"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:49:4049"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:49:4049"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:40:49:4049"}
+{"ip":"unknown","level":"http","message":"Incoming POST request","method":"POST","timestamp":"2025-09-03 12:40:58:4058","url":"http://localhost:3001/trpc/auth.login","userAgent":"curl/7.86.0"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 12:40:58:4058"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 12:40:58:4058"}
+{"email":"admin@example.com","level":"info","message":"User login completed successfully","role":"admin","timestamp":"2025-09-03 12:40:58:4058","userId":"1","username":"admin"}
+{"level":"info","maxAge":"7 days","message":"Authentication cookie set","sameSite":"lax","secure":false,"timestamp":"2025-09-03 12:40:58:4058"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User logged in successfully","role":"admin","timestamp":"2025-09-03 12:40:58:4058","userId":"1","username":"admin"}
+{"duration":"9ms","level":"http","message":"Completed POST http://localhost:3001/trpc/auth.login","method":"POST","status":200,"timestamp":"2025-09-03 12:40:58:4058","url":"http://localhost:3001/trpc/auth.login"}
+{"ip":"unknown","level":"http","message":"Incoming HEAD request","method":"HEAD","timestamp":"2025-09-03 12:41:03:413","url":"http://localhost:3001/trpc/auth.me","userAgent":"curl/7.86.0"}
+{"duration":"1ms","level":"http","message":"Completed HEAD http://localhost:3001/trpc/auth.me","method":"HEAD","status":204,"timestamp":"2025-09-03 12:41:03:413","url":"http://localhost:3001/trpc/auth.me"}
+{"ip":"unknown","level":"http","message":"Incoming HEAD request","method":"HEAD","timestamp":"2025-09-03 12:41:08:418","url":"http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json","userAgent":"curl/7.86.0"}
+{"duration":"0ms","level":"http","message":"Completed HEAD http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json","method":"HEAD","status":200,"timestamp":"2025-09-03 12:41:08:418","url":"http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json"}
+{"level":"info","message":"🛑 Server shutting down","signal":"SIGTERM","timestamp":"2025-09-03 12:41:17:4117"}
+{"arch":"x64","environment":"development","level":"info","message":"🚀 Server starting up","nodeVersion":"v22.6.0","platform":"darwin","port":3001,"timestamp":"2025-09-03 12:41:24:4124"}
+{"ip":"unknown","level":"http","message":"Incoming HEAD request","method":"HEAD","timestamp":"2025-09-03 12:41:28:4128","url":"http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json","userAgent":"curl/7.86.0"}
+{"duration":"1ms","level":"http","message":"Completed HEAD http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json","method":"HEAD","status":200,"timestamp":"2025-09-03 12:41:28:4128","url":"http://localhost:3001/.well-known/appspecific/com.chrome.devtools.json"}
+{"ip":"unknown","level":"http","message":"Incoming HEAD request","method":"HEAD","timestamp":"2025-09-03 12:41:32:4132","url":"http://localhost:3001/trpc/auth.me","userAgent":"curl/7.86.0"}
+{"duration":"2ms","level":"http","message":"Completed HEAD http://localhost:3001/trpc/auth.me","method":"HEAD","status":204,"timestamp":"2025-09-03 12:41:32:4132","url":"http://localhost:3001/trpc/auth.me"}
+{"ip":"unknown","level":"http","message":"Incoming POST request","method":"POST","timestamp":"2025-09-03 12:41:36:4136","url":"http://localhost:3001/trpc/auth.login","userAgent":"curl/7.86.0"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 12:41:36:4136"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 12:41:36:4136"}
+{"email":"admin@example.com","level":"info","message":"User login completed successfully","role":"admin","timestamp":"2025-09-03 12:41:36:4136","userId":"1","username":"admin"}
+{"level":"info","maxAge":"7 days","message":"Authentication cookie set","sameSite":"lax","secure":false,"timestamp":"2025-09-03 12:41:36:4136"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User logged in successfully","role":"admin","timestamp":"2025-09-03 12:41:36:4136","userId":"1","username":"admin"}
+{"duration":"10ms","level":"http","message":"Completed POST http://localhost:3001/trpc/auth.login","method":"POST","status":200,"timestamp":"2025-09-03 12:41:36:4136","url":"http://localhost:3001/trpc/auth.login"}
+{"ip":"unknown","level":"http","message":"Incoming POST request","method":"POST","timestamp":"2025-09-03 12:41:40:4140","url":"http://localhost:3001/trpc/auth.login","userAgent":"curl/7.86.0"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 12:41:40:4140"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 12:41:40:4140"}
+{"email":"admin@example.com","level":"info","message":"User login completed successfully","role":"admin","timestamp":"2025-09-03 12:41:40:4140","userId":"1","username":"admin"}
+{"level":"info","maxAge":"7 days","message":"Authentication cookie set","sameSite":"lax","secure":false,"timestamp":"2025-09-03 12:41:40:4140"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User logged in successfully","role":"admin","timestamp":"2025-09-03 12:41:40:4140","userId":"1","username":"admin"}
+{"duration":"3ms","level":"http","message":"Completed POST http://localhost:3001/trpc/auth.login","method":"POST","status":200,"timestamp":"2025-09-03 12:41:40:4140","url":"http://localhost:3001/trpc/auth.login"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:05:425","username":"testuser"}
+{"email":"test@example.com","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:42:05:425","userId":"4954579d-0fb5-4fd0-aa79-f6c07cf2363a","username":"testuser"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:42:05:425","userId":"4954579d-0fb5-4fd0-aa79-f6c07cf2363a","username":"testuser"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:05:425","username":"user1"}
+{"email":"duplicate@example.com","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:42:05:425","userId":"c7d93638-65f9-4bd2-9551-6f2e1bc8b054","username":"user1"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:42:05:425","userId":"c7d93638-65f9-4bd2-9551-6f2e1bc8b054","username":"user1"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:05:425","username":"user2"}
+{"email":"duplicate@example.com","level":"warn","message":"Registration failed - user already exists","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"duplicate@example.com","ip":"unknown","level":"error","message":"User registration failed: User with this email already exists","stack":"Error: User with this email already exists\n    at register (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:29:17)\n    at processTicksAndRejections (native:7:39)","timestamp":"2025-09-03 15:42:05:425","username":"user2"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:05:425","username":""}
+{"email":"invalid-email","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:42:05:425","userId":"b799b28e-9023-4c17-9ca3-999ee424050b","username":""}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:42:05:425","userId":"b799b28e-9023-4c17-9ca3-999ee424050b","username":""}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"admin@example.com","level":"info","message":"User login completed successfully","role":"admin","timestamp":"2025-09-03 15:42:05:425","userId":"1","username":"admin"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User logged in successfully","role":"admin","timestamp":"2025-09-03 15:42:05:425","userId":"1","username":"admin"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"admin@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"admin@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"nonexistent@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"nonexistent@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"nonexistent@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"invalid-email","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:42:05:425"}
+{"email":"invalid-email","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:05:425"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:23:4223","username":"testuser"}
+{"email":"test@example.com","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:42:23:4223","userId":"6b6596c6-ba24-4889-8804-aa49c240aaba","username":"testuser"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:42:23:4223","userId":"6b6596c6-ba24-4889-8804-aa49c240aaba","username":"testuser"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:23:4223","username":"user1"}
+{"email":"duplicate@example.com","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:42:23:4223","userId":"230c8800-6473-47d4-b717-295348615ea9","username":"user1"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:42:23:4223","userId":"230c8800-6473-47d4-b717-295348615ea9","username":"user1"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:23:4223","username":"user2"}
+{"email":"duplicate@example.com","level":"warn","message":"Registration failed - user already exists","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"duplicate@example.com","ip":"unknown","level":"error","message":"User registration failed: User with this email already exists","stack":"Error: User with this email already exists\n    at register (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:29:17)\n    at processTicksAndRejections (native:7:39)","timestamp":"2025-09-03 15:42:23:4223","username":"user2"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:23:4223","username":""}
+{"email":"invalid-email","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:42:23:4223","userId":"62763783-a03a-4986-a209-91ef1383a220","username":""}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:42:23:4223","userId":"62763783-a03a-4986-a209-91ef1383a220","username":""}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"admin@example.com","level":"info","message":"User login completed successfully","role":"admin","timestamp":"2025-09-03 15:42:23:4223","userId":"1","username":"admin"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User logged in successfully","role":"admin","timestamp":"2025-09-03 15:42:23:4223","userId":"1","username":"admin"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"admin@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"admin@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:42:23:4223"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"nonexistent@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"nonexistent@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"nonexistent@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:42:23:4223"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:23:4223"}
+{"email":"invalid-email","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:42:23:4223"}
+{"ip":"unknown","level":"http","message":"Incoming GET request","method":"GET","timestamp":"2025-09-03 12:42:35:4235","url":"http://localhost:3000/","userAgent":"curl/7.86.0"}
+{"ip":"unknown","level":"warn","message":"Route not found","method":"GET","path":"/","timestamp":"2025-09-03 12:42:35:4235","userAgent":"curl/7.86.0"}
+{"duration":"1ms","level":"http","message":"Completed GET http://localhost:3000/","method":"GET","status":404,"timestamp":"2025-09-03 12:42:35:4235","url":"http://localhost:3000/"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:44:4244","username":"testuser"}
+{"email":"test@example.com","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:42:44:4244","userId":"30448719-dd28-4160-80e2-26c9914ad43a","username":"testuser"}
+{"email":"test@example.com","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:42:44:4244","userId":"30448719-dd28-4160-80e2-26c9914ad43a","username":"testuser"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:44:4244","username":"user1"}
+{"email":"duplicate@example.com","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:42:44:4244","userId":"a9d63a60-2fd6-4b50-9ee6-1d8edc678f19","username":"user1"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:42:44:4244","userId":"a9d63a60-2fd6-4b50-9ee6-1d8edc678f19","username":"user1"}
+{"email":"duplicate@example.com","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:44:4244","username":"user2"}
+{"email":"duplicate@example.com","level":"warn","message":"Registration failed - user already exists","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"duplicate@example.com","ip":"unknown","level":"error","message":"User registration failed: User with this email already exists","stack":"Error: User with this email already exists\n    at register (/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/src/services/auth-service.ts:29:17)\n    at processTicksAndRejections (native:7:39)","timestamp":"2025-09-03 15:42:44:4244","username":"user2"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User registration attempt","timestamp":"2025-09-03 15:42:44:4244","username":""}
+{"email":"invalid-email","level":"info","message":"User registration completed successfully","role":"user","timestamp":"2025-09-03 15:42:44:4244","userId":"d045071d-c067-4d71-a370-0d7a211a772c","username":""}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User registered successfully","role":"user","timestamp":"2025-09-03 15:42:44:4244","userId":"d045071d-c067-4d71-a370-0d7a211a772c","username":""}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"admin@example.com","level":"info","message":"User login completed successfully","role":"admin","timestamp":"2025-09-03 15:42:44:4244","userId":"1","username":"admin"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User logged in successfully","role":"admin","timestamp":"2025-09-03 15:42:44:4244","userId":"1","username":"admin"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"admin@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"admin@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"admin@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"nonexistent@example.com","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"nonexistent@example.com","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"nonexistent@example.com","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"invalid-email","ip":"unknown","level":"info","message":"User login attempt","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"invalid-email","level":"warn","message":"Login failed - invalid credentials","timestamp":"2025-09-03 15:42:44:4244"}
+{"email":"invalid-email","error":"Invalid email or password","ip":"unknown","level":"warn","message":"User login failed","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"AuthService initialized","timestamp":"2025-09-03 15:42:44:4244"}
+{"level":"info","message":"🛑 Server shutting down","signal":"SIGTERM","timestamp":"2025-09-03 12:42:49:4249"}

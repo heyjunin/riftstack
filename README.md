@@ -1,265 +1,280 @@
-# 🚀 RiftStack
+# React Router + tRPC + Hono + Bun Template
 
-> A "rift" in time - something fast and different. Modern sound and tech.
+Template completo para aplicações full-stack com React Router v7, tRPC, Hono e Bun.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Bun](https://img.shields.io/badge/Bun-1.2.0-000000?logo=bun&logoColor=white)](https://bun.sh/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react&logoColor=black)](https://react.dev/)
-[![tRPC](https://img.shields.io/badge/tRPC-11.0.0-2596BE?logo=trpc&logoColor=white)](https://trpc.io/)
-[![Hono](https://img.shields.io/badge/Hono-4.7.4-000000?logo=hono&logoColor=white)](https://hono.dev/)
+## 🚀 Tecnologias
 
-A modern, full-stack web application template built with cutting-edge technologies. RiftStack combines the power of React Router, tRPC, and Hono to deliver a blazing-fast, type-safe development experience.
+### Backend (Hono + tRPC)
 
-## ✨ Features
+- ✅ Autenticação JWT completa
+- ✅ Sistema de roles (user/admin)
+- ✅ Validação com Zod
+- ✅ **Sistema de logging profissional com Winston**
+- ✅ **Middleware CORS configurado**
+- ✅ Rotação automática de logs
+- ✅ Logs estruturados e coloridos
 
-- **🚀 Ultra-Fast Development** - Built with Bun for lightning-fast package management and execution
-- **🔒 Type Safety** - End-to-end type safety with tRPC and TypeScript
-- **⚡ Modern React** - React 19 with the latest features and optimizations
-- **🎨 Beautiful UI** - Comprehensive component library with Radix UI and Tailwind CSS
-- **📱 Responsive Design** - Mobile-first approach with modern design patterns
-- **🧪 Testing Ready** - Vitest, Playwright, and React Testing Library included
-- **🔧 Developer Experience** - Hot reload, linting, and formatting with Biome
-- **📦 Monorepo Architecture** - Turbo-powered workspace management
+### Frontend (React Router v7)
 
-## 🏗️ Architecture
+- ✅ Páginas de login e registro
+- ✅ Gerenciamento de estado de autenticação
+- ✅ UI moderna com shadcn/ui
+- ✅ Tailwind CSS v4
+- ✅ Integração tRPC completa
+
+### Infraestrutura
+
+- ✅ Monorepo com Turbo
+- ✅ Bun como runtime
+- ✅ TypeScript em todo o projeto
+- ✅ Biome para linting/formatting
+- ✅ Testes com Vitest e Playwright
+
+## 📁 Estrutura do Projeto
 
 ```
-RiftStack/
 ├── apps/
-│   ├── server/          # Hono + tRPC backend
-│   └── web/            # React Router frontend
-├── packages/            # Shared packages (future)
-└── tools/              # Build and development tools
+│   ├── server/                 # Backend Hono + tRPC
+│   │   ├── src/
+│   │   │   ├── lib/
+│   │   │   │   └── logger.ts   # Sistema de logging Winston
+│   │   │   ├── middleware/
+│   │   │   │   ├── auth.ts     # Middleware de autenticação
+│   │   │   │   └── cors.ts     # Middleware CORS
+│   │   │   ├── services/
+│   │   │   │   └── auth-service.ts
+│   │   │   └── repositories/
+│   │   │       └── mock-user-repository.ts
+│   │   ├── logs/               # Arquivos de log (gerados automaticamente)
+│   │   ├── scripts/
+│   │   │   └── manage-logs.sh  # Scripts para gerenciar logs
+│   │   └── LOGGING.md          # Documentação completa do sistema de logging
+│   └── web/                    # Frontend React Router
+└── package.json
 ```
 
-### Backend (Server)
+## 🔧 Pré-requisitos
 
-- **Hono** - Ultra-fast web framework
-- **tRPC** - Type-safe API layer
-- **Zod** - Schema validation
-- **Bun** - JavaScript runtime
+- [Bun](https://bun.sh/) instalado
+- Node.js 18+ (para compatibilidade)
 
-### Frontend (Web)
-
-- **React Router 7** - Modern routing with file-based routing
-- **React 19** - Latest React with compiler optimizations
-- **Tailwind CSS 4** - Utility-first CSS framework
-- **Radix UI** - Accessible component primitives
-- **Vite** - Lightning-fast build tool
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- [Bun](https://bun.sh/) 1.2.0 or higher
-- Node.js 18+ (for some tooling)
-
-### Installation
+## 🚀 1. Instalar dependências
 
 ```bash
-# Clone the repository
-git clone https://github.com/heyjunin/riftstack.git
-cd riftstack
-
-# Install dependencies
 bun install
-
-# Start development servers
-bun dev
 ```
 
-### Development
+## 🚀 2. Executar em desenvolvimento
 
 ```bash
-# Start all services in development mode
-bun dev
+# Inicia backend e frontend simultaneamente
+bun run dev
 
-# Start only the backend
+# Ou individualmente:
+# Backend
 cd apps/server && bun run dev
 
-# Start only the frontend
+# Frontend
 cd apps/web && bun run dev
-
-# Run tests
-bun test
-
-# Lint code
-bun lint
-
-# Build for production
-bun build
 ```
 
-## 📁 Project Structure
+## 🚀 3. Acessar a aplicação
 
+- **Frontend**: http://localhost:3000
+- **Backend**: http://localhost:3001
+
+## 🔐 Credenciais de Teste
+
+### Admin
+
+- **Email**: admin@example.com
+- **Senha**: admin123
+- **Role**: admin
+
+### Usuário
+
+- **Email**: user@example.com
+- **Senha**: user123
+- **Role**: user
+
+## 📱 Rotas Disponíveis
+
+### Públicas
+
+- `/` - Página inicial
+- `/login` - Página de login
+- `/register` - Página de registro
+
+### Autenticadas
+
+- `/settings` - Configurações do usuário (requer login)
+
+## 🔧 Endpoints tRPC
+
+### Autenticação
+
+- `auth.register` - Registro de usuário
+- `auth.login` - Login de usuário
+- `auth.logout` - Logout de usuário
+- `auth.me` - Informações do usuário atual
+
+### Usuário
+
+- `user.profile` - Perfil do usuário
+- `user.updateProfile` - Atualizar perfil
+- `user.changePassword` - Alterar senha
+
+### Admin
+
+- `admin.users` - Listar usuários (apenas admin)
+
+## 📊 Sistema de Logging
+
+### Comandos Disponíveis
+
+```bash
+# Ver status dos logs
+bun run logs:status
+
+# Acompanhar logs em tempo real
+bun run logs:tail
+
+# Ver apenas logs de erro
+bun run logs:errors
+
+# Ver apenas logs HTTP
+bun run logs:http
+
+# Limpar logs antigos
+bun run logs:clean
+
+# Arquivar logs antigos
+bun run logs:archive
 ```
-apps/
-├── server/
-│   ├── src/
-│   │   ├── context.ts      # tRPC context
-│   │   ├── index.ts        # Hono server entry
-│   │   ├── router.ts       # tRPC router
-│   │   ├── schemas.ts      # Zod schemas
-│   │   └── types.ts        # TypeScript types
-│   └── package.json
-└── web/
-    ├── app/
-    │   ├── components/     # UI components
-    │   ├── hooks/         # Custom React hooks
-    │   ├── lib/           # Utility functions
-    │   ├── routes/        # File-based routes
-    │   └── root.tsx       # Root layout
-    ├── public/            # Static assets
-    └── package.json
+
+### Estrutura de Logs
+
+- **application-YYYY-MM-DD.log** - Logs gerais da aplicação
+- **error-YYYY-MM-DD.log** - Logs de erro
+- **http-YYYY-MM-DD.log** - Logs de requisições HTTP
+- **archive/** - Logs arquivados automaticamente
+
+### Níveis de Log
+
+- 🔴 **error** - Erros críticos
+- 🟡 **warn** - Avisos
+- 🟢 **info** - Informações gerais
+- 🟣 **http** - Requisições HTTP
+- ⚪ **debug** - Informações de debug
+
+## 🌐 Configuração CORS
+
+O servidor está configurado com CORS para permitir requisições do frontend:
+
+- **Origem**: http://localhost:3000 (desenvolvimento)
+- **Credenciais**: Habilitadas para cookies de autenticação
+- **Métodos**: GET, POST, PUT, DELETE, PATCH, OPTIONS
+- **Headers**: Content-Type, Authorization, etc.
+
+## 🎯 Próximos Passos para Produção
+
+### 1. Banco de Dados Real
+
+- Substituir `MockUserRepository` por implementação real
+- Implementar `UserRepository` interface
+- Adicionar migrations e seeders
+
+### 2. Segurança
+
+- Configurar `JWT_SECRET` em variáveis de ambiente
+- Implementar refresh tokens
+- Adicionar rate limiting
+- Configurar CORS para domínios de produção
+
+### 3. Funcionalidades
+
+- Recuperação de senha
+- Verificação de email
+- Autenticação 2FA
+- Auditoria de ações
+
+### 4. Monitoramento
+
+- Integrar com sistemas de monitoramento (Datadog, Sentry)
+- Configurar alertas para logs críticos
+- Dashboard de métricas em tempo real
+
+## 🧪 Testes
+
+```bash
+# Testes do backend
+cd apps/server && bun test
+
+# Testes do frontend
+cd apps/web && bun test
+
+# Testes E2E
+cd apps/web && bun run test:e2e
 ```
 
-## 🛠️ Available Scripts
+## 📝 Scripts Disponíveis
 
-### Root Level
+### Backend (apps/server)
 
-- `bun dev` - Start development servers
-- `bun build` - Build all applications
-- `bun test` - Run all tests
-- `bun lint` - Lint all code
+```bash
+bun run dev          # Desenvolvimento com hot reload
+bun run lint         # Linting com Biome
+bun run test         # Testes com Bun
+bun run types        # Verificação de tipos TypeScript
+bun run logs:status  # Status dos logs
+bun run logs:tail    # Logs em tempo real
+bun run logs:errors  # Ver logs de erro
+bun run logs:http    # Ver logs HTTP
+bun run logs:clean   # Limpar logs antigos
+bun run logs:archive # Arquivar logs antigos
+```
 
-### Server App
+### Frontend (apps/web)
 
-- `bun run dev` - Start server with hot reload
-- `bun test` - Run server tests
-- `bun run types` - Type check
+```bash
+bun run dev          # Desenvolvimento com Vite
+bun run build        # Build de produção
+bun run preview      # Preview do build
+bun run lint         # Linting com Biome
+bun run test         # Testes com Vitest
+bun run test:e2e     # Testes E2E com Playwright
+```
 
-### Web App
-
-- `bun run dev` - Start development server
-- `bun run build` - Build for production
-- `bun run start` - Serve production build
-- `bun test` - Run Playwright tests
-- `bun run test:browser` - Run Vitest browser tests
-
-## 🎯 Key Technologies
-
-### Runtime & Package Manager
-
-- **[Bun](https://bun.sh/)** - All-in-one JavaScript runtime and package manager
+## 🔍 Debugging
 
 ### Backend
 
-- **[Hono](https://hono.dev/)** - Fast, lightweight web framework
-- **[tRPC](https://trpc.io/)** - End-to-end typesafe APIs
-- **[Zod](https://zod.dev/)** - TypeScript-first schema validation
+- Logs aparecem no console
+- Logs estruturados em arquivos
+- Endpoints tRPC em `/trpc/*`
+- Middleware de autenticação ativo
+- Middleware CORS configurado
 
 ### Frontend
 
-- **[React 19](https://react.dev/)** - Latest React with compiler
-- **[React Router 7](https://reactrouter.com/)** - Modern file-based routing
-- **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS
-- **[Radix UI](https://www.radix-ui.com/)** - Accessible components
+- React DevTools disponível
+- tRPC DevTools integrado
+- Hot reload ativo
+- Logs de erro no console
 
-### Build Tools
+## 📚 Documentação Adicional
 
-- **[Vite](https://vitejs.dev/)** - Lightning-fast build tool
-- **[Turbo](https://turbo.build/)** - High-performance build system
-- **[Biome](https://biomejs.dev/)** - Fast formatter and linter
+- [Sistema de Logging](./apps/server/LOGGING.md) - Documentação completa do Winston
+- [Padrões de Desenvolvimento](./.cursor/rules/) - Regras do Cursor para o projeto
 
-### Testing
+## 🤝 Contribuição
 
-- **[Vitest](https://vitest.dev/)** - Fast unit testing
-- **[Playwright](https://playwright.dev/)** - End-to-end testing
-- **[React Testing Library](https://testing-library.com/)** - Component testing
+1. Fork o projeto
+2. Crie uma branch para sua feature
+3. Commit suas mudanças
+4. Push para a branch
+5. Abra um Pull Request
 
-## 🔧 Configuration
+## 📄 Licença
 
-### Environment Variables
-
-Create `.env` files in each app directory as needed:
-
-```bash
-# apps/server/.env
-DATABASE_URL="your-database-url"
-JWT_SECRET="your-jwt-secret"
-
-# apps/web/.env
-VITE_API_URL="http://localhost:3000"
-```
-
-### TypeScript
-
-The project uses strict TypeScript configuration with path mapping and modern features enabled.
-
-### Biome
-
-Code formatting and linting is handled by Biome with a configuration optimized for React and TypeScript projects.
-
-## 🧪 Testing
-
-### Unit Tests
-
-```bash
-# Run all unit tests
-bun test
-
-# Run tests in watch mode
-cd apps/web && bun run test:browser
-```
-
-### Integration Tests
-
-```bash
-# Run Playwright tests
-bun run test:integration
-```
-
-### Test Coverage
-
-The project is configured for comprehensive test coverage across both frontend and backend.
-
-## 🚀 Deployment
-
-### Production Build
-
-```bash
-# Build all applications
-bun build
-
-# The web app will be available in apps/web/build/
-# The server can be deployed directly from apps/server/
-```
-
-### Docker
-
-A Dockerfile is included for containerized deployment:
-
-```bash
-# Build the image
-docker build -t riftstack .
-
-# Run the container
-docker run -p 3000:3000 riftstack
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-**Maintainer:** [@heyjunin](https://github.com/heyjunin)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [React Router](https://reactrouter.com/) team for the amazing routing solution
-- [tRPC](https://trpc.io/) team for type-safe APIs
-- [Hono](https://hono.dev/) team for the fast web framework
-- [Bun](https://bun.sh/) team for the incredible runtime
-- [Vercel](https://vercel.com/) for Turbo and the monorepo tooling
-
----
-
-**RiftStack** - Breaking through the boundaries of modern web development. ⚡
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.

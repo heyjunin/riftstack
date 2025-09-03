@@ -1,297 +1,265 @@
-import {
-    AlertCircle,
-    ArrowLeft,
-    Bell,
-    CheckCircle,
-    Database,
-    Palette,
-    RotateCcw,
-    Save,
-    Settings,
-    Shield
-} from 'lucide-react';
-import { Navigation } from '../components/navigation';
-import { Alert, AlertDescription } from '../components/ui/alert';
+import { useState } from 'react';
+import { useAuth } from '../hooks/use-auth';
 import { Button } from '../components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Alert, AlertDescription } from '../components/ui/alert';
+import { AlertTriangle, CheckCircle, LogOut, User, Shield, Key } from 'lucide-react';
 import { Separator } from '../components/ui/separator';
-import { Switch } from '../components/ui/switch';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import type { Route } from './+types/settings';
-
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: 'Settings - React Router + tRPC + Hono' },
-    { name: 'description', content: 'Configure your application settings' },
-  ];
-}
 
 export default function SettingsPage() {
+  const { user, logout, updateProfile, changePassword, isUpdatingProfile, isChangingPassword, updateProfileError, changePasswordError } = useAuth();
+  
+  const [profileForm, setProfileForm] = useState({
+    username: user?.username || '',
+    email: user?.email || '',
+  });
+  
+  const [passwordForm, setPasswordForm] = useState({
+    currentPassword: '',
+    newPassword: '',
+    confirmPassword: '',
+  });
+  
+  const [profileSuccess, setProfileSuccess] = useState(false);
+  const [passwordSuccess, setPasswordSuccess] = useState(false);
+
+  const handleProfileSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setProfileSuccess(false);
+    
+    try {
+      await updateProfile({
+        username: profileForm.username,
+        email: profileForm.email,
+      });
+      setProfileSuccess(true);
+    } catch (error) {
+      // Error is handled by the hook
+    }
+  };
+
+  const handlePasswordSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setPasswordSuccess(false);
+    
+    if (passwordForm.newPassword !== passwordForm.confirmPassword) {
+      alert('As senhas não coincidem');
+      return;
+    }
+    
+    try {
+      await changePassword(passwordForm.currentPassword, passwordForm.newPassword);
+      setPasswordSuccess(true);
+      setPasswordForm({ currentPassword: '', newPassword: '', confirmPassword: '' });
+    } catch (error) {
+      // Error is handled by the hook
+    }
+  };
+
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <CardTitle>Não autorizado</CardTitle>
+            <CardDescription>
+              Você precisa estar logado para acessar esta página
+            </CardDescription>
+          </CardHeader>
+        </Card>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      
-      <div className="p-8">
-        <div className="container mx-auto max-w-4xl">
-          {/* Header Section */}
-          <div className="text-center space-y-4 mb-8">
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <Settings className="h-8 w-8 text-primary" />
-              <h1 className="text-4xl font-bold tracking-tight">Settings</h1>
-            </div>
-            <p className="text-xl text-muted-foreground">
-              Customize your application preferences
+    <div className="min-h-screen bg-background p-4">
+      <div className="max-w-4xl mx-auto space-y-6">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold">Configurações</h1>
+            <p className="text-muted-foreground">
+              Gerencie suas preferências e informações da conta
             </p>
           </div>
+          <Button variant="outline" onClick={logout}>
+            <LogOut className="w-4 h-4 mr-2" />
+            Sair
+          </Button>
+        </div>
 
-          {/* Settings Tabs */}
-          <Tabs defaultValue="appearance" className="w-full">
-            <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="appearance">Appearance</TabsTrigger>
-              <TabsTrigger value="notifications">Notifications</TabsTrigger>
-              <TabsTrigger value="security">Security</TabsTrigger>
-              <TabsTrigger value="advanced">Advanced</TabsTrigger>
-            </TabsList>
-
-            {/* Appearance Tab */}
-            <TabsContent value="appearance" className="space-y-6 mt-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Palette className="h-5 w-5 text-purple-500" />
-                    <span>Theme & Colors</span>
-                  </CardTitle>
-                  <CardDescription>
-                    Customize the look and feel of your application
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="theme-mode">Theme Mode</Label>
-                      <Select defaultValue="system">
-                        <SelectTrigger className="w-48">
-                          <SelectValue placeholder="Select theme" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="light">Light</SelectItem>
-                          <SelectItem value="dark">Dark</SelectItem>
-                          <SelectItem value="system">System</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="color-scheme">Color Scheme</Label>
-                      <Select defaultValue="default">
-                        <SelectTrigger className="w-48">
-                          <SelectValue placeholder="Select color scheme" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="default">Default</SelectItem>
-                          <SelectItem value="blue">Blue</SelectItem>
-                          <SelectItem value="green">Green</SelectItem>
-                          <SelectItem value="purple">Purple</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="animations">Enable Animations</Label>
-                      <Switch id="animations" defaultChecked />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            {/* Notifications Tab */}
-            <TabsContent value="notifications" className="space-y-6 mt-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Bell className="h-5 w-5 text-blue-500" />
-                    <span>Notification Preferences</span>
-                  </CardTitle>
-                  <CardDescription>
-                    Control how and when you receive notifications
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="email-notifications">Email Notifications</Label>
-                      <Switch id="email-notifications" defaultChecked />
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="push-notifications">Push Notifications</Label>
-                      <Switch id="push-notifications" defaultChecked />
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="browser-notifications">Browser Notifications</Label>
-                      <Switch id="browser-notifications" />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="notification-email">Notification Email</Label>
-                      <Input 
-                        id="notification-email" 
-                        type="email" 
-                        placeholder="your@email.com"
-                        defaultValue="user@example.com"
-                      />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            {/* Security Tab */}
-            <TabsContent value="security" className="space-y-6 mt-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Shield className="h-5 w-5 text-green-500" />
-                    <span>Security Settings</span>
-                  </CardTitle>
-                  <CardDescription>
-                    Manage your account security and privacy
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="two-factor">Two-Factor Authentication</Label>
-                      <Switch id="two-factor" />
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="session-timeout">Session Timeout (minutes)</Label>
-                      <Input 
-                        id="session-timeout" 
-                        type="number" 
-                        className="w-24"
-                        defaultValue="30"
-                        min="5"
-                        max="480"
-                      />
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="login-notifications">Login Notifications</Label>
-                      <Switch id="login-notifications" defaultChecked />
-                    </div>
-                  </div>
-
-                  <Separator />
-
-                  <div className="space-y-4">
-                    <h4 className="font-medium">Password</h4>
-                    <div className="space-y-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="current-password">Current Password</Label>
-                        <Input id="current-password" type="password" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="new-password">New Password</Label>
-                        <Input id="new-password" type="password" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="confirm-password">Confirm New Password</Label>
-                        <Input id="confirm-password" type="password" />
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            {/* Advanced Tab */}
-            <TabsContent value="advanced" className="space-y-6 mt-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Database className="h-5 w-5 text-orange-500" />
-                    <span>Advanced Configuration</span>
-                  </CardTitle>
-                  <CardDescription>
-                    Advanced settings for power users
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="debug-mode">Debug Mode</Label>
-                      <Switch id="debug-mode" />
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="analytics">Analytics Collection</Label>
-                      <Switch id="analytics" defaultChecked />
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="telemetry">Telemetry Data</Label>
-                      <Switch id="telemetry" defaultChecked />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="api-endpoint">Custom API Endpoint</Label>
-                      <Input 
-                        id="api-endpoint" 
-                        placeholder="https://api.example.com"
-                        defaultValue="http://localhost:3000"
-                      />
-                    </div>
-                  </div>
-
-                  <Separator />
-
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Profile Settings */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <User className="w-5 h-5" />
+                Perfil
+              </CardTitle>
+              <CardDescription>
+                Atualize suas informações pessoais
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleProfileSubmit} className="space-y-4">
+                {profileSuccess && (
                   <Alert>
-                    <AlertCircle className="h-4 w-4" />
+                    <CheckCircle className="h-4 w-4" />
                     <AlertDescription>
-                      Advanced settings may affect application stability. 
-                      Only modify these if you know what you're doing.
+                      Perfil atualizado com sucesso!
                     </AlertDescription>
                   </Alert>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
+                )}
+                
+                {updateProfileError && (
+                  <Alert variant="destructive">
+                    <AlertTriangle className="h-4 w-4" />
+                    <AlertDescription>
+                      {updateProfileError.message || 'Erro ao atualizar perfil'}
+                    </AlertDescription>
+                  </Alert>
+                )}
+                
+                <div className="space-y-2">
+                  <Label htmlFor="username">Nome de usuário</Label>
+                  <Input
+                    id="username"
+                    value={profileForm.username}
+                    onChange={(e) => setProfileForm(prev => ({ ...prev, username: e.target.value }))}
+                    required
+                    disabled={isUpdatingProfile}
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={profileForm.email}
+                    onChange={(e) => setProfileForm(prev => ({ ...prev, email: e.target.value }))}
+                    required
+                    disabled={isUpdatingProfile}
+                  />
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  disabled={isUpdatingProfile}
+                  className="w-full"
+                >
+                  {isUpdatingProfile ? 'Salvando...' : 'Salvar Alterações'}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
 
-          {/* Action Buttons */}
-          <div className="mt-8 flex gap-4 justify-center">
-            <Button variant="outline" asChild>
-              <a href="/">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Home
-              </a>
-            </Button>
-            <Button variant="outline">
-              <RotateCcw className="h-4 w-4 mr-2" />
-              Reset to Defaults
-            </Button>
-            <Button>
-              <Save className="h-4 w-4 mr-2" />
-              Save Changes
-            </Button>
-          </div>
-
-          {/* Success Message */}
-          <div className="mt-6 text-center">
-            <Alert className="max-w-md mx-auto">
-              <CheckCircle className="h-4 w-4 text-green-500" />
-              <AlertDescription>
-                Your settings have been saved successfully!
-              </AlertDescription>
-            </Alert>
-          </div>
+          {/* Password Settings */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Key className="w-5 h-5" />
+                Alterar Senha
+              </CardTitle>
+              <CardDescription>
+                Atualize sua senha de acesso
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handlePasswordSubmit} className="space-y-4">
+                {passwordSuccess && (
+                  <Alert>
+                    <CheckCircle className="h-4 w-4" />
+                    <AlertDescription>
+                      Senha alterada com sucesso!
+                    </AlertDescription>
+                  </Alert>
+                )}
+                
+                {changePasswordError && (
+                  <Alert variant="destructive">
+                    <AlertTriangle className="h-4 w-4" />
+                    <AlertDescription>
+                      {changePasswordError.message || 'Erro ao alterar senha'}
+                    </AlertDescription>
+                  </Alert>
+                )}
+                
+                <div className="space-y-2">
+                  <Label htmlFor="currentPassword">Senha Atual</Label>
+                  <Input
+                    id="currentPassword"
+                    type="password"
+                    value={passwordForm.currentPassword}
+                    onChange={(e) => setPasswordForm(prev => ({ ...prev, currentPassword: e.target.value }))}
+                    required
+                    disabled={isChangingPassword}
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="newPassword">Nova Senha</Label>
+                  <Input
+                    id="newPassword"
+                    type="password"
+                    value={passwordForm.newPassword}
+                    onChange={(e) => setPasswordForm(prev => ({ ...prev, newPassword: e.target.value }))}
+                    required
+                    disabled={isChangingPassword}
+                    minLength={6}
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="confirmPassword">Confirmar Nova Senha</Label>
+                  <Input
+                    id="confirmPassword"
+                    type="password"
+                    value={passwordForm.confirmPassword}
+                    onChange={(e) => setPasswordForm(prev => ({ ...prev, confirmPassword: e.target.value }))}
+                    required
+                    disabled={isChangingPassword}
+                    minLength={6}
+                  />
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  disabled={isChangingPassword}
+                  className="w-full"
+                >
+                  {isChangingPassword ? 'Alterando...' : 'Alterar Senha'}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
+
+        {/* Account Info */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Shield className="w-5 h-5" />
+              Informações da Conta
+            </CardTitle>
+            <CardDescription>
+              Detalhes da sua conta
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <Label className="text-sm font-medium text-muted-foreground">ID do Usuário</Label>
+                <p className="text-sm">{user.id}</p>
+              </div>
+              <div>
+                <Label className="text-sm font-medium text-muted-foreground">Função</Label>
+                <p className="text-sm capitalize">{user.role}</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

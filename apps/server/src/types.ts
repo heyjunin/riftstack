@@ -1,11 +1,12 @@
-export const status = ['active'] as const;
+export const status = ["active"] as const;
 
 // Auth Types
 export interface User {
   id: string;
   email: string;
   username: string;
-  role: 'user' | 'admin';
+  password: string;
+  role: "user" | "admin";
   createdAt: Date;
   updatedAt: Date;
 }
@@ -14,7 +15,7 @@ export interface AuthUser {
   id: string;
   email: string;
   username: string;
-  role: 'user' | 'admin';
+  role: "user" | "admin";
 }
 
 export interface LoginCredentials {
@@ -36,14 +37,14 @@ export interface AuthResponse {
 export interface JWTPayload {
   userId: string;
   email: string;
-  role: 'user' | 'admin';
+  role: "user" | "admin";
   iat: number;
-  exp: number;
+  exp?: number; // Opcional pois o JWT.sign adiciona automaticamente
 }
 
 // Mock Database Types (for future real DB integration)
 export interface UserRepository {
-  createUser(user: Omit<User, 'id' | 'createdAt' | 'updatedAt'>): Promise<User>;
+  createUser(user: Omit<User, "id" | "createdAt" | "updatedAt">): Promise<User>;
   findUserByEmail(email: string): Promise<User | null>;
   findUserById(id: string): Promise<User | null>;
   updateUser(id: string, updates: Partial<User>): Promise<User | null>;

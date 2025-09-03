@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/logs/.ef560617271bbffaaf8740428e625d08c55d6d6d-audit.json",
+    "files": [
+        {
+            "date": 1756913712140,
+            "name": "/Users/juninho/dev/2025/bora/hono-rpc-examples/react-router-trpc-hono-bun-template/apps/server/logs/application-2025-09-03.log",
+            "hash": "80fec33e7c733435fa034dad4fbaf5ff384d6603c4d5527c9a703119ee52c6c9"
+        }
+    ],
+    "hashType": "sha256"
+}
